@@ -14,6 +14,8 @@ else
   DCIST_WORKING_DIR=$input_path
 fi
 
-echo "Adding .cuts file to $DCIST_WORKING_DIR"
-ssh $cdeb_username@cdeb-Thelio-Major.local "touch $DCIST_WORKING_DIR/.cuts"
+echo "Adding .upenn_cuts file to $DCIST_WORKING_DIR"
+ssh $cdeb_username@cdeb-Thelio-Major.local "touch $DCIST_WORKING_DIR/.upenn_cuts"
 
+echo "export CDEB_USER=$(echo "$cdeb_username")" >> ~/.bashrc
+echo "Make sure to re-source .bashrc, to update environment variables!"
